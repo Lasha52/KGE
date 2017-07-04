@@ -14,7 +14,5 @@ def updateControls(event,oboba):
 			oboba.vx = 0
 		if event.key == pygame.K_LEFT and oboba.vx<0:
 			oboba.vx = 0
-		# if event.key == pygame.K_UP:
-		# 	return 1
 	
 				

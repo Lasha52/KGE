@@ -1,6 +1,8 @@
 import pygame
 import sys
+
 anmtnFPS = 30
+
 class main :
 	vx = 0
 	vy = 0
@@ -69,7 +71,6 @@ class main :
 		self.idle = [0]*anmtnFPS
 		for j in range(0,anmtnFPS):
 			self.walking[j] = pygame.image.load("animation/"+name+'00'+str((j%100-j%10)//10)+str(j%10)+'.png')
-	
 	def animate(self,screen):
 		if(self.vx!= 0):
 			self.i10+=1

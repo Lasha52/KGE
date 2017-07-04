@@ -29,16 +29,19 @@ while not windowclose:
 				windowclose = True
 			controls.updateControls(event,oboba)
 
-	# abla1.checkCollision(oboba)
-	# abla2.checkCollision(oboba)
 	oboba.update(colmap)
+	
 	screen.fill((100,100,100))				
+	
 	oboba.animate(screen)
+	
 	block4.draw(screen)
 	block1.draw(screen)
 	block2.draw(screen)
 	block3.draw(screen)
 	abla1.draw(screen)
 	abla2.draw(screen)
+	
 	pygame.display.update()
+	
 	clock.tick(300)
