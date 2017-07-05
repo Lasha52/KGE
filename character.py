@@ -10,9 +10,12 @@ class main :
 	isJumping = False
 	moveSpeed = 0.9
 	jumpStrength = -3
-	i=0
-	i10=0
-	currentImage=0
+	# animation variables
+	i = 0
+	i10 = 0
+	currentImage = 0
+	flipState = 0
+	# 
 	def __init__(self,xcoordinate,ycoordinate,sizex,sizey,screenwidth,screenheight):
 		self.x = xcoordinate
 		self.y = ycoordinate
@@ -72,17 +75,25 @@ class main :
 		for j in range(0,anmtnFPS):
 			self.walking[j] = pygame.image.load("animation/"+name+'00'+str((j%100-j%10)//10)+str(j%10)+'.png')
 	def animate(self,screen):
-		if(self.vx!= 0):
-			self.i10+=1
-			if(self.i10==10):
+		if(self.vx != 0):
+			self.i10 += 1
+			if(self.i10 == 10):
 				self.i10 = 0
 				self.i += 1
-		if(self.i==anmtnFPS):
-			self.i=0
-		self.currentImage=self.walking[self.i]
-		if(self.vx<0):
+		if(self.i == anmtnFPS):
+			self.i = 0
+		self.currentImage = self.walking[self.i]
+		if(self.vx < 0):
+			self.flipState = -1
+		if(self.vx > 0):
+			self.flipState = 1
+		if(self.flipState < 0):	
 			self.currentImage = pygame.transform.flip(self.currentImage,True,False)
 		screen.blit(self.currentImage,(self.x,self.y))
+		# if self.flipState*self.vx < 0:
+		# 	self.flipState = self.vx
+		# 	for i in range(0,anmtnFPS):
+		# 		pygame.transform.flip(self.walking[i],True,True)
 		
 
 

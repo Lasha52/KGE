@@ -29,11 +29,12 @@ while not windowclose:
 				windowclose = True
 			controls.updateControls(event,oboba)
 
-	oboba.update(colmap)
 	
 	screen.fill((100,100,100))				
 	
 	oboba.animate(screen)
+	
+	oboba.update(colmap)
 	
 	block4.draw(screen)
 	block1.draw(screen)
