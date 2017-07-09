@@ -90,10 +90,4 @@ class main :
 		if(self.flipState < 0):	
 			self.currentImage = pygame.transform.flip(self.currentImage,True,False)
 		screen.blit(self.currentImage,(self.x,self.y))
-		# if self.flipState*self.vx < 0:
-		# 	self.flipState = self.vx
-		# 	for i in range(0,anmtnFPS):
-		# 		pygame.transform.flip(self.walking[i],True,True)
-		
-
 
