@@ -14,7 +14,9 @@ pygame.display.set_caption('KATABALAXA 0.0.1')
 windowclose = False
 
 colmap = collisions.map(WIDTH,HEIGHT)
-oboba = character.main(400,0,140,70,WIDTH,HEIGHT)
+
+
+oboba = character.main(400,HEIGHT-71,140,70,WIDTH,HEIGHT)
 block1 = objects.block(100,550,90,50,colmap)
 block2 = objects.block(150,450,90,50,colmap)
 block3 = objects.block(300,300,300,50,colmap)

@@ -24,13 +24,15 @@ class  ablabuda:
 				colmap.map[i][j] = 2
 	def draw(self,screen):
 		pygame.draw.rect(screen,(0,255,0),(self.x,self.y,self.width,self.height))
+
 class web:
 	def __init__(self,x,y,HEIGHT,colmap):
 		self.x = x
 		self.y = y
-		for i in range(0,HEIGHT):
-			if(colmap.map[self.x][self.y-i] == 0):
-				colmap.map[self.x][self.y-i] = 3
+		self.length = 0
+		for i in range(0,y+3):
+			if(colmap.map[x][y-i] == 0):
+				colmap.map[x][y-i] = 3
 			else:
 				self.length = i
 				break

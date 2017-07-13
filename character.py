@@ -82,10 +82,6 @@ class main :
 			if colMap.map[int(self.x)+i][int(self.y)] == 3 or colMap.map[int(self.x)+i][int(self.y)+self.height] == 3:
 				self.isOnWeb = True
 				self.g = 0 
-		for i in range(0,self.height):
-			if colMap.map[int(self.x)][int(self.y)+i] == 3 or colMap.map[int(self.x)+self.width][int(self.y)+i] == 3:
-				self.isOnWeb = True
-				self.g = 0 
 
 					
 
