@@ -15,7 +15,7 @@ windowclose = False
 
 colmap = collisions.map(WIDTH,HEIGHT)
 
-
+	
 oboba = character.main(400,HEIGHT-71,140,70,WIDTH,HEIGHT)
 block1 = objects.block(100,550,90,50,colmap)
 block2 = objects.block(150,450,90,50,colmap)
@@ -35,18 +35,19 @@ while not windowclose:
 
 	
 	if oboba.webAdd == True:
-		webs[oboba.webCount] = objects.web(int(oboba.x),int(oboba.y),HEIGHT,colmap)
+		webs[oboba.webCount] = objects.web(int(oboba.x+oboba.width/2),int(oboba.y+oboba.height/2)+10,HEIGHT,colmap)
 		oboba.webCount += 1
 		oboba.webAdd = False
 
 	screen.fill((100,100,100))				
 	
+	for i in range(0,oboba.webCount):
+		webs[i].draw(screen)
+
 	oboba.animate(screen)
 	
 	oboba.update(colmap)
 	
-	for i in range(0,oboba.webCount):
-		webs[i].draw(screen)
 
 	block4.draw(screen)
 	block1.draw(screen)

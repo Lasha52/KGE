@@ -37,7 +37,7 @@ class web:
 				self.length = i
 				break
 	def draw(self,screen):
-		pygame.draw.rect(screen,(255,0,0),(self.x,self.y-self.length,1,self.length))
+		pygame.draw.rect(screen,(255,255,255),(self.x,self.y-self.length,1,self.length))
 
 
 

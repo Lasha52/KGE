@@ -28,7 +28,6 @@ class main :
 		self.HEIGHT = HEIGHT
 
 	def update(self,colMap):
-		print(self.isOnWeb)
 
 		self.x+=self.vx
 		self.vy+=self.g
